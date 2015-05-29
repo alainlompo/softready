@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{view.index.title}">Welcome!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header">&nbsp;</div>
+<div class="container">
+    <!-- /* Handle the flash message */-->
+    <th:block th:if="${message != null}">
+        <!-- /* The message code is returned from the @Controller */ -->
+        <div th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})">&nbsp;</div>
+    </th:block>
+    <p>
+      Below is the list of your updates from 05-18-2015 to this day.
+      
+      <br/>
+      <br/>
+      <br/>
+      <table>
+      	<tr>
+      		<td>application name:</td>
+      		<td><b>SoftReady</b></td>
+      	</tr>
+      	<tr>
+      		<td>application version:</td>
+      		<td>1.0.0.125</td>
+      	</tr>
+      	<tr>
+      		<td>update type:</td>
+      		<td>New release</td>
+      	</tr>
+      	<tr>
+      		<td>update link:</td>
+      		<td><a href='https://github.com/alainlompo'>https://github.com/alainlompo</a></td>
+      	</tr>
+      </table>
+      
+      
+       <br/>
+      <br/>
+      <br/>
+      <table>
+      	<tr>
+      		<td>application name:</td>
+      		<td><b>Nkrusted framework</b></td>
+      	</tr>
+      	<tr>
+      		<td>application version:</td>
+      		<td>1.5.0.11</td>
+      	</tr>
+      	<tr>
+      		<td>update type:</td>
+      		<td>Security fix</td>
+      	</tr>
+      	<tr>
+      		<td>update link:</td>
+      		<td><a href='https://github.com/alainlompo'>Nkrusted Security patch</a></td>
+      	</tr>
+      </table>
+    </p>
+</div>
+</body>
+</html>

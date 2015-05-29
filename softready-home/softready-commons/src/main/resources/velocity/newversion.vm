@@ -1,0 +1,43 @@
+<html>
+	<body>
+		<table border='0'>
+			<tr>
+				<td>
+					<h1><b>New application update release</b></h1>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<br/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Dear <b>${newMessage.customerFirstName} ${newMessage.customerLastName}<b>,<br/>
+					<br/>
+					We are pleased to inform you that a new version of your following application has been released:
+					<br/>
+					<br/>
+					application:<b>${newMessage.appCompleteName}</b><br/>
+					new version:<b>${newMessage.appCompleteVersion}</b><br/>
+					<br/>
+					We kindly invite you to update your current version in order to benefit from the new and exciting functionalities that were bundled into this release. Here is the update url:<br/>
+					<br/>
+					url:<b>${newMessage.updateUrl}</b>
+					<br/>
+					<br/>
+					Best wishes
+					<br/>
+					<br/>
+					The update services team
+					<br/>
+					
+					 
+				</td>
+			</tr>
+			
+		</table>
+		
+	</body>
+ 
+</html>
